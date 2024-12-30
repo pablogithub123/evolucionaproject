@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evoluciona</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Evoluciona.css">
+    <link rel="icon" href="./images/logo.png" type="image/x-icon"/>
+</head>
+<body>
+
+    <header>
+        <div class="banner">
+            <img class="banner-img" src="./images/imagen1.jpg" alt="Energía Solar 1">
+            <img class="banner-img" src="./images/imagen7.jpg" alt="Energía Solar 2">
+            <img class="banner-img" src="./images/imagen2.jpg" alt="Energía Solar 3">
+            <img class="banner-img" src="./images/imagen9.jpg" alt="Energía Solar 4">
+            <img class="banner-img" src="./images/imagen8.jpg" alt="Energía Solar 5">
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <img src="./images/logo.png" alt="Logo" class="logo">
+            Evoluciona
+        </div>
+        <div class="navbar-toggle" id="navbar-toggle">
+            &#9776; <!-- Icono de menú hamburguesa -->
+        </div>
+        <ul class="navbar-menu" id="navbar-menu">
+            <li><a href="./calculadora.html">Calcula tu Consumo</a></li>
+            <li><a href="./tiposdepaneles.html">Tipos de Paneles Solares</a></li>
+            <li><a href="./eventos.html">Eventos y Cursos de Interés</a></li>
+            <li><a href="./empresas.html">Empresas Aliadas</a></li>
+            <li><a href="./sabiasque.html">¿Sabías que?</a></li>
+            <li><a href="contactanos.html">Contáctanos</a></li>
+        </ul>
+    </nav>
+
+    <section class="imagenintro">
+        <div class="intro-text" id="animated-text">
+            Nuestro planeta clama por el cambio...
+        </div>
+    </section>
+
+    <section class="info-section">
+        <p class="info-text">
+            La dependencia global de los combustibles fósiles ha causado efectos devastadores en el medio ambiente, 
+            incrementando las emisiones de CO2 y la contaminación atmosférica. En Colombia, aunque el país cuenta 
+            con recursos naturales abundantes, su matriz energética sigue dependiendo en gran medida de fuentes no 
+            renovables, como el gas natural y el carbón. Esto no solo contribuye al cambio climático, sino que también 
+            genera una mayor vulnerabilidad económica frente a la fluctuación de los precios internacionales de estos 
+            combustibles. A nivel mundial, la necesidad de descarbonizar los sistemas energéticos se ha vuelto 
+            urgente para mitigar los efectos del cambio climático y mejorar la calidad del aire. En este contexto, 
+            las energías renovables, como la solar, se presentan como una solución clave; sin embargo, en Colombia, 
+            la adopción de la energía solar sigue siendo limitada, debido a varios factores como la falta de 
+            conocimiento, barreras regulatorias y los altos costos iniciales de implementación.
+        
+            
+        </p>
+    </section>
+    
+
+    <!-- Contenedor principal -->
+<div class="container">
+    <!-- Contenido de la línea de tiempo -->
+    <div class="timeline">
+        <h2 class="timeline-header">Energía Solar en Colombia</h2>
+        <div class="timeline-item card" onclick="toggleDetails(0)">
+            <span class="timeline-date">50's</span>
+            <h3 class="timeline-title">Primeros pasos</h3>
+            <p class="timeline-details">Los primeros pasos de la energía solar dieron paso en la ciudad de Santa Marta, donde se instalaron calentadores solares.</p>
+        </div>
+        <div class="timeline-item card" onclick="toggleDetails(1)">
+            <span class="timeline-date">60's</span>
+            <h3 class="timeline-title">Aceptación</h3>
+            <p class="timeline-details">Universidades de Santander y Bogotá implementaron calentadores solares.</p>
+        </div>
+        <div class="timeline-item card" onclick="toggleDetails(2)">
+            <span class="timeline-date">80's</span>
+            <h3 class="timeline-title">Expansión</h3>
+            <p class="timeline-details">Se implementaron calentadores solares masivamente en ciudades como Medellín, Manizales y Bogotá.</p>
+        </div>
+        <div class="timeline-item card" onclick="toggleDetails(3)">
+            <span class="timeline-date">2014</span>
+            <h3 class="timeline-title">Ley 1715</h3>
+            <p class="timeline-details">Se aprueba la Ley 1715, que fomenta el uso de energías renovables, incluyendo la solar, en el sistema energético nacional.</p>
+        </div>
+        <div class="timeline-item card" onclick="toggleDetails(4)">
+            <span class="timeline-date">2015</span>
+            <h3 class="timeline-title">Agencia internacional</h3>
+            <p class="timeline-details">Colombia ingresa a la Agencia Internacional de Energías Renovables.</p>
+        </div>
+        <div class="timeline-item card" onclick="toggleDetails(5)">
+            <span class="timeline-date">2018</span>
+            <h3 class="timeline-title">Primera Subasta de Energías Renovables</h3>
+            <p class="timeline-details">Colombia realiza su primera subasta de energías renovables, impulsando el desarrollo de proyectos solares.</p>
+        </div>
+        <div class="timeline-item card" onclick="toggleDetails(6)">
+            <span class="timeline-date">2020</span>
+            <h3 class="timeline-title">Parque Solar El Paso</h3>
+            <p class="timeline-details">Se inaugura el parque solar El Paso en Cesar, el más grande en Colombia en su momento.</p>
+        </div>
+        <div class="timeline-item card" onclick="toggleDetails(7)">
+            <span class="timeline-date">2022</span>
+            <h3 class="timeline-title">Objetivo de Energía Limpia</h3>
+            <p class="timeline-details">El gobierno establece metas de generación de electricidad a partir de energías renovables para 2030.</p>
+        </div>
+    </div>
+
+    <!-- Contenido de la transicion energetica -->
+    <div class="introtran">
+        <h1>TRANSICION ENERGETICA</h1>
+        <p>
+         La transición energética es un proceso de cambio de una forma de producción de energía a otra, e incluye fuentes de energía renovables y no renovables. Entre los cambios se encuentra el reemplazo de combustibles fósiles, como el carbón y el petróleo, por fuentes renovables, como la energía solar y la eólica.
+         <br>La transición de los combustibles fósiles a las fuentes renovables llevará tiempo, pero al final valdrá la pena porque es la clave para mitigar los impactos ambientales de fenómenos como el cambio climático y la contaminación del aire.
+        </p>
+        <h3>¿Por que es Necesaria la Trancision Energetica?</h3>
+
+        <p>Para evitar los peores efectos del cambio climático, se deben reducir las emisiones de dióxido de carbono que contaminan el aire y generan, entre otros, el efecto invernadero y el aumento de la temperatura global. Con el Acuerdo de París se espera lograr este objetivo.
+            El acuerdo se basa en el principio de que todos los países deben tomar medidas contra el cambio climático y que los países desarrollados deben apoyar a los países en desarrollo, a través de la financiación y la transferencia de tecnología. Por ello, es necesario que todos los países inicien su transición hacia fuentes renovables, que eviten una catástrofe ambiental de dimensiones globales.
+            <br>El sistema actual no tiene la capacidad de proporcionar suficiente energía; los combustibles fósiles son escasos y, además, finitos, por lo cual se están haciendo cada día más costosos.<br> Un nuevo sistema energético debe, no solo atender la demanda, sino también dejar de emitir CO2 a la atmósfera.
+            La transición energética es necesaria para reducir las emisiones contaminantes, para garantizar la seguridad del suministro y para mantener la competitividad en el mercado global.
+        </p>
+    </div>
+</div>
+
+<section class="info-section">
+    <h2>ENERGIA SOLAR</h2>
+    <p class="info-solar">
+        La energía solar es una fuente de energía renovable que se obtiene de la radiación solar, aprovechando la energía del sol para generar electricidad y calor. Esta energía se puede convertir en electricidad mediante paneles fotovoltaicos, que utilizan células solares para transformar la luz solar en corriente eléctrica, o en calor a través de sistemas de calentadores solares, que calientan agua o aire para usos domésticos e industriales. La energía solar tiene múltiples aplicaciones, desde el suministro eléctrico en hogares y empresas hasta la calefacción de edificios, la producción de agua caliente y la carga de dispositivos portátiles.
+        Los beneficios de la energía solar son numerosos: es inagotable y sostenible, ya que el sol es una fuente continua de energía, lo que significa que no se agota con el tiempo. 
+        En Colombia, la energía solar ha experimentado un notable crecimiento en los últimos años, impulsada por políticas y leyes que promueven el uso de energías renovables. Iniciativas como la Ley 1715 de 2014, que fomenta la integración de energías renovables no convencionales en el sistema energético nacional, han sido clave para el desarrollo de proyectos solares en el país, evidenciando el compromiso de Colombia con la sostenibilidad y la diversificación de su matriz energética.
+    </p>
+</section>
+    
+<!-- Sección para el video -->
+<div class="video-container">
+    <h2 class="video-title">QUIERES SABER UN POCO MAS? </h2>
+    <iframe class="video-iframe" 
+            src="https://www.youtube.com/embed/5cVpl1WGmJA?si=9apnENSKG1huBNUN" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+    </iframe>
+</div>
+
+
+    <footer>
+        <p>&copy; 2024 Evoluciona. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="./evoluciona.js"></script>
+</body>
+</html>

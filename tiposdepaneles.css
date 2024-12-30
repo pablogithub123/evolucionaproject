@@ -1,0 +1,69 @@
+/* Encabezado con imagen de fondo */
+.tipos-encabezado {
+    position: relative;
+    background-image: url("./images/imagen1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 250px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+}
+
+/* Contenedor principal de los paneles */
+.paneles-lista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Tarjeta individual de cada panel */
+.panel {
+    background-color: rgba(255, 255, 255, 0.2); /* Color blanco con transparencia */
+    border-radius: 8px;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    backdrop-filter: blur(10px); /* Desenfoque de fondo */
+}
+
+.panel h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.panel img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 15px 0;
+    border-radius: 8px;
+}
+
+.panel p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+/* Fondo de la página */
+body {
+    background-image: url(./images/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+}

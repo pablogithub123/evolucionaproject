@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Fuente utilizada */
+    background-image: url("./images/fondo.jpg");
+    background-size: cover; /* Hace que la imagen cubra toda la pantalla sin deformarse */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Encabezado con imagen de fondo */
+.eventos-encabezado {
+    position: relative;
+    background-image: url("./images/imagen9.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 250px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+}
+
+header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    font-size: 2em;
+}
+
+.eventos-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 20px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.evento-card {
+    background-color: rgba(255, 255, 255, 0.6); /* Blanco con 60% de opacidad */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    overflow: hidden;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.evento-fecha {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.evento-fecha .dia {
+    font-size: 1.5em;
+    display: block;
+}
+
+.evento-fecha .mes {
+    font-size: 1em;
+}
+
+.evento-info {
+    padding: 15px;
+}
+
+.evento-info h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.evento-info .costo {
+    background-color: rgba(255, 255, 255, 0.6); /* Blanco con 60% de opacidad */
+    color: #666;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 0.9em;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.evento-info .ubicacion,
+.evento-info .contacto {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.detalles {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.detalles:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries para responsive design */
+
+/* Ajustes para pantallas pequeñas (tabletas y móviles) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .eventos-container {
+        gap: 20px;
+        max-width: 90%;
+    }
+
+    .evento-card {
+        width: 100%; /* Ajusta el ancho para que ocupe toda la pantalla */
+        margin: 10px 0;
+    }
+
+    .evento-info h3 {
+        font-size: 1.1em;
+    }
+
+    .evento-info .costo,
+    .evento-info .ubicacion,
+    .evento-info .contacto {
+        font-size: 0.85em;
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .evento-fecha .dia {
+        font-size: 1.2em;
+    }
+
+    .evento-info h3 {
+        font-size: 1em;
+    }
+
+    .evento-info .costo,
+    .evento-info .ubicacion,
+    .evento-info .contacto {
+        font-size: 0.8em;
+    }
+
+    .detalles {
+        font-size: 0.9em;
+    }
+}

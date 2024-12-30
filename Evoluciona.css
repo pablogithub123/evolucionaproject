@@ -1,0 +1,442 @@
+.banner {
+    position: relative; /* Permite que las imágenes se superpongan */
+    overflow: hidden; /* Oculta las partes de las imágenes que salen del contenedor */
+    width: 100%; /* Ancho completo */
+    height: 60vh; /* Altura del banner */
+}
+
+.banner-img {
+    position: absolute; /* Posiciona las imágenes en el mismo lugar */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    object-fit: cover; /* Cubre el contenedor sin distorsionar la imagen */
+    opacity: 0; /* Inicialmente invisibles */
+    transition: opacity 1s ease-in-out; /* Transición suave al cambiar la opacidad */
+}
+
+.banner-img.active {
+    opacity: 1; /* Muestra la imagen activa */
+}
+
+@media (max-width: 768px) {
+    .banner {
+        height: 40vh; /* Altura ajustada para pantallas más pequeñas */
+    }
+}
+
+.navbar {
+    display: flex; /* Usamos flexbox para alinear elementos */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Centra verticalmente */
+    padding: 15px 20px; /* Espaciado interno */
+    background-color: hsl(120, 3%, 7%); /* Color de fondo de la navbar */
+    color: white; /* Color del texto */
+    position: relative; /* Posicionamiento relativo */
+}
+
+.navbar-brand {
+    display: flex; /* Para alinear logo y texto */
+    align-items: center; /* Centra verticalmente el logo con el texto */
+}
+
+.navbar-brand .logo {
+    width: 40px; /* Ancho del logo */
+    height: auto; /* Mantiene la proporción del logo */
+    margin-right: 10px; /* Espacio entre el logo y el texto */
+}
+
+.navbar-menu {
+    list-style: none; /* Quita los puntos de la lista */
+    display: flex; /* Muestra los elementos en línea */
+    margin: 0; /* Sin margen */
+    padding: 0; /* Sin padding */
+    font-size: 20px; /* Tamaño de la fuente */
+}
+
+.navbar-menu li {
+    margin-left: 50px; /* Espaciado entre las opciones del menú */
+}
+
+.navbar-menu a {
+    color: white; /* Color del texto de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    transition: color 0.3s; /* Transición suave al cambiar color */
+}
+
+.navbar-menu a:hover {
+    color: #2f3834; /* Color al pasar el ratón */
+}
+
+.navbar-toggle {
+    display: none; /* Oculto por defecto en pantallas grandes */
+    font-size: 1.5rem; /* Tamaño del icono de menú */
+    cursor: pointer; /* Cambia el cursor al pasar sobre él */
+}
+
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none; /* Oculta el menú en pantallas pequeñas */
+        flex-direction: column; /* Cambia a columna en lugar de fila */
+        width: 100%; /* Ocupa todo el ancho */
+        position: absolute; /* Permite posicionar el menú */
+        top: 60px; /* Posiciona el menú debajo de la navbar */
+        left: 0; /* Alinea a la izquierda */
+        background-color: hsl(0, 4%, 5%); /* Color de fondo del menú */
+        z-index: 10; /* Asegura que esté por encima de otros elementos */
+    }
+    
+    .navbar-menu.active {
+        display: flex; /* Muestra el menú cuando está activo */
+    }
+
+    .navbar-toggle {
+        display: block; /* Muestra el icono de menú hamburguesa en móviles */
+    }
+
+    .navbar-menu li {
+        margin: 15px 0; /* Espaciado vertical entre los elementos del menú */
+    }
+    
+    .navbar-menu a {
+        color: white; /* Color de los enlaces en móviles */
+        text-decoration: none; /* Sin subrayado */
+        transition: color 0.3s, background-color 0.3s; /* Transiciones suaves */
+        padding: 10px 20px; /* Espaciado interno */
+        border-radius: 4px; /* Bordes redondeados */
+    }
+}
+
+.imagenintro {
+    position: relative; /* Permite colocar el texto sobre la imagen */
+    width: 100%; /* Ancho completo */
+    height: 50vh; /* Altura adaptativa para diferentes pantallas */
+    background-image: url('./images/imagena.jpg'); /* Imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    margin-top: 50px; /* Separación del navbar */
+    display: flex; /* Usamos flexbox para centrar el texto */
+    justify-content: center; /* Centra horizontalmente el texto */
+    align-items: center; /* Centra verticalmente el texto */
+    text-align: center; /* Centra el texto */
+}
+
+.intro-text {
+    position: absolute; /* Permite posicionar el texto sobre la imagen */
+    left: 20px; /* Posición horizontal */
+    bottom: 20px; /* Posición vertical */
+    color: white; /* Color del texto */
+    font-size: 4rem; /* Tamaño de la fuente */
+    font-weight: 300; /* Peso de la fuente */
+    font-family: 'Roboto', sans-serif; /* Fuente utilizada */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mejorar la legibilidad */
+    display: inline-block; /* Permite que el texto ocupe solo el espacio necesario */
+    padding: 0 20px; /* Espacio lateral para evitar que se corte */
+}
+
+/* Media Queries para adaptaciones responsivas */
+@media (max-width: 768px) {
+    .imagenintro {
+        height: 30vh; /* Altura ajustada para pantallas más pequeñas */
+    }
+
+    .intro-text {
+        font-size: 3rem; /* Tamaño de fuente reducido */
+        padding: 0 10px; /* Espacio lateral reducido */
+    }
+}
+
+@media (max-width: 480px) {
+    .imagenintro {
+        height: 25vh; /* Altura aún más pequeña para pantallas pequeñas */
+    }
+
+    .intro-text {
+        font-size: 2rem; /* Tamaño de fuente aún más pequeño */
+        padding: 0 5px; /* Espacio lateral reducido */
+    }
+}
+
+.letter {
+    opacity: 0; /* Comienza oculta */
+    display: inline-block; /* Permite animar cada letra individualmente */
+    animation: fadeIn 0.5s forwards; /* Animación de aparición */
+    margin-right: 5px; /* Espacio entre letras */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Finaliza visible */
+    }
+}
+
+.info-section {
+    padding: 40px; /* Espaciado interno */
+    background-color: hwb(204 53% 43% / 0.12); /* Color de fondo con opacidad */
+    backdrop-filter: blur(10px); /* Aplica un desenfoque al fondo */
+    border-radius: 15px; /* Redondea los bordes */
+    margin: 40px auto; /* Margen superior e inferior de 40px y centrado en la página */
+    max-width: 800px; /* Ancho máximo de la tarjeta */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra para dar un efecto de flotación */
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+.info-section:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Color más blanco al hacer hover */
+}
+
+.info-text {
+    color: #333; /* Color del texto en gris oscuro */
+    font-size: 1.2rem; /* Tamaño de la fuente */
+    line-height: 1.6; /* Espaciado entre líneas */
+    max-width: none; /* Permite que el texto ocupe todo el ancho disponible */
+    width: 100%; /* Asegura que el texto ocupe el 100% del ancho del contenedor */
+    margin: 0; /* Sin margen, para que no esté centrado */
+}
+
+body {
+    background-image: url('./images/fondo.jpg'); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover; /* Cubre todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    margin: 0; /* Elimina márgenes por defecto del body */
+}
+
+
+
+
+
+/*linea de tiempo*/
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 20px auto; /* Centrar el contenedor */
+    padding: 20px;
+    padding-left: 40px; /* Aumentar el margen izquierdo del contenedor */
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 400px; /* Anchura de la línea de tiempo */
+    position: relative;
+    padding: 10px 0;
+    margin-top: 20px; /* Añadir margen superior para separar del título */
+    margin-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #2d6a4f;
+}
+
+.card {
+    position: relative;
+    background-color: hwb(180 65% 34% / 0.702); /* Gris con transparencia */
+    
+    border-radius: 8px;
+    margin: 20px 0;
+    padding: 15px 20px;
+    width: 100%; /* Asegurarse que ocupa todo el ancho */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card:hover {
+    background-color: rgba(227, 227, 227, 0.9); /* Color más claro al pasar el ratón */
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -7px;
+    top: 20px;
+    width: 14px;
+    height: 14px;
+    background-color: #2d6a4f;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: #2d6a4f;
+    font-size: 1.2em;
+}
+
+.timeline-title {
+    color: #333;
+    font-size: 1.4em;
+    margin: 5px 0;
+}
+
+.timeline-details {
+    display: none; /* Comienza oculto */
+    font-size: 1em;
+    color: #666;
+    margin-top: 10px;
+    animation: fadeIn 0.5s ease;
+}
+
+.timeline-header {
+    margin-left: 70px; /* margen para el titulo del timeline */
+}
+
+
+
+/*intro energia solar*/
+
+.container {
+    display: flex; /* Usa flexbox para alinear horizontalmente */
+    align-items: flex-start; /* Alinea ambos elementos al inicio */
+    gap: 160px; /* Espacio entre la línea de tiempo y la tarjeta */
+    max-width: 1200px; /* Ancho máximo */
+    margin: 20px auto; /* Centrar el contenedor */
+    padding: 20px;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column; /* Mantiene la línea de tiempo en columna */
+    align-items: flex-start; /* Alinea los elementos al inicio */
+    width: 400px; /* Anchura de la línea de tiempo */
+    position: relative;
+    padding: 10px 0;
+    
+}
+
+.card {
+    position: relative;
+    background-color: rgba(211, 211, 211, 0.7); /* Gris con transparencia */
+    border-radius: 15px; /* Igualar el borde con introsolar */
+    margin: 20px 0;
+    padding: 15px 20px;
+    width: 100%; /* Asegurarse que ocupa todo el ancho */
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Añadir transición a la sombra */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra para dar un efecto de flotación */
+}
+
+.card:hover {
+    background-color: rgba(227, 227, 227, 0.9); /* Color más claro al pasar el ratón */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada al pasar el ratón */
+}
+
+
+
+
+.introtran {
+    background-color: rgba(211, 211, 211, 0.7); /* Gris con transparencia */
+    border-radius: 15px; /* Igualar el borde con timeline */
+    padding: 20px; /* Espaciado interno */
+    margin-left: 40px; /* Margen izquierdo para separar del timeline */
+    width: 480px; /* Ancho adecuado */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para dar un efecto de flotación */
+}
+
+.introtran h1 {
+    color: #333; /* Color del texto en gris oscuro */
+    font-size: 1.5rem; /* Aumentar el tamaño del título */
+    line-height: 1.6; /* Espaciado entre líneas */
+    text-align: center; /* Centrar el texto */
+    margin: 0; /* Sin margen */
+}
+
+.introtran p {
+    color: #333; /* Color del texto en gris oscuro */
+    font-size: 1.2rem; /* Tamaño de la fuente */
+    line-height: 1.6; /* Espaciado entre líneas */
+    margin: 0; /* Sin margen */
+    width: 100%; /* Asegura que el texto ocupe el 100% del ancho del contenedor */
+}
+
+
+footer {
+    text-align: center; /* Centrar el texto */
+    margin-top: 20px; /* Espacio superior, opcional */
+    padding: 10px; /* Espacio interno, opcional */
+}
+
+
+.info-solar {
+    color: #333; /* Color del texto en gris oscuro */
+    font-size: 1.2rem; /* Tamaño de la fuente */
+    line-height: 1.6; /* Espaciado entre líneas */
+    max-width: none; /* Permite que el texto ocupe todo el ancho disponible */
+    width: 100%; /* Asegura que el texto ocupe el 100% del ancho del contenedor */
+    margin: 0; /* Sin margen, para que no esté centrado */
+}
+
+h2{
+    text-align: center;
+    font-family: 'Roboto', sans-serif; /* Fuente utilizada */
+
+}
+
+h3{
+    text-align: center;
+    font-family: 'Roboto', sans-serif; /* Fuente utilizada */
+
+}
+
+h1{
+    font-family: 'Roboto', sans-serif; /* Fuente utilizada */
+
+}
+
+
+
+
+
+/* Estilos para la sección del video */
+.video-container {
+    text-align: center;
+    margin-bottom: 30px; /* Ajusta el espacio según sea necesario */
+}
+
+/* Título del video */
+.video-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Estilos para hacer el video responsivo */
+.video-iframe {
+    width: 100%;
+    height: 100%;
+    max-width: 800px;  /* Tamaño máximo para el video */
+    aspect-ratio: 16 / 9;  /* Relación de aspecto para el video (16:9 es común en YouTube) */
+    border: none;
+    margin: 0 auto;  /* Centra el iframe */
+}
+
+/* Aseguramos que el contenedor del iframe sea responsivo también */
+@media (max-width: 768px) {
+    .video-title {
+        font-size: 20px;  /* Reduce el tamaño del título en pantallas pequeñas */
+    }
+
+    .video-iframe {
+        max-width: 100%;  /* En pantallas pequeñas, el iframe ocupa el 100% del ancho disponible */
+        height: 200px;  /* Ajustamos la altura del video */
+    }
+}
+
+@media (max-width: 480px) {
+    .video-title {
+        font-size: 18px;  /* Aún más pequeño en pantallas muy pequeñas */
+    }
+
+    .video-iframe {
+        height: 180px;  /* Ajustamos más la altura en pantallas muy pequeñas */
+    }
+}

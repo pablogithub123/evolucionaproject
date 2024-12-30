@@ -1,0 +1,114 @@
+body {
+    font-family: 'Roboto', sans-serif; /* Fuente utilizada */
+    background-image: url("./images/fondo.jpg");
+    background-size: cover; /* Hace que la imagen cubra toda la pantalla sin deformarse */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    margin: 0;
+    padding: 20px;
+}
+
+
+/* Encabezado con imagen de fondo */
+.sabias-encabezado {
+    position: relative;
+    background-image: url("./images/imagen9.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 250px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+}
+
+.titulo-principal {
+    text-align: center; /* Centra el título */
+    color: #000000; /* Color blanco */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 36px; /* Tamaño del texto */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    transition: transform 0.3s ease; /* Transición suave para el hover */
+
+}
+
+.titulo-principal:hover {
+    transform: scale(1.05); /* Aumenta el tamaño un 5% */
+}
+
+.curiosidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Asegura que las tarjetas ocupen el espacio disponible */
+    gap: 20px; /* Aumenta el espacio entre tarjetas */
+    max-width: 1200px;
+    margin: 40px auto; /* Centra el contenedor */
+}
+
+.tarjeta-curiosidad {
+    background-color: rgba(255, 255, 255, 0.2); /* Color blanco con 20% de opacidad */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px; /* Aumenta el padding para hacer las tarjetas más grandes */
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transiciones para sombra y transformación */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra suave */
+    color: hsl(200, 7%, 48%); /* Cambiar el color de la fuente a blanco */
+    text-align: center; /* Centra el texto dentro de la tarjeta */
+}
+
+.tarjeta-curiosidad:hover {
+    box-shadow: 0 8px 20px rgba(236, 235, 235, 0.5); /* Sombra más intensa al pasar el mouse */
+    transform: translateY(-2px); /* Eleva ligeramente la tarjeta */
+}
+
+.titulo-curiosidad {
+    text-align: center;
+    margin: 0;
+    font-weight: 400; /* Cambiar a un peso más ligero */
+    color: rgb(0, 0, 0); /* Asegurarte que el color sigue siendo blanco */
+}
+
+.contenido-curiosidad {
+    margin-top: 10px;
+    font-weight: 300; /* Peso más ligero para el contenido, si lo deseas */
+}
+
+.imagen-final {
+    text-align: center; /* Centra la imagen dentro del contenedor */
+    margin-top: 40px; /* Espacio superior para separar la imagen del contenido */
+}
+
+.imagen-centrada {
+    width: 65%; /* Ajusta el porcentaje al tamaño que desees, por ejemplo, 80% del ancho del contenedor */
+    max-width: 100%; /* Asegura que la imagen no se agrande más allá del 100% de su tamaño original */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 20px;
+}
+
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .titulo-principal {
+        font-size: 28px; /* Tamaño del título más pequeño en pantallas más pequeñas */
+    }
+
+    .curiosidades {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en tabletas */
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo-principal {
+        font-size: 24px; /* Tamaño aún más pequeño en móviles */
+    }
+
+    .curiosidades {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+    }
+}
+
+

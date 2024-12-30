@@ -1,0 +1,101 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url("./images/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Encabezado con imagen de fondo */
+.calculadora-encabezado {
+    position: relative;
+    background-image: url("./images/imagen9.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 250px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.titulo-principal {
+    color: white;
+    font-weight: bold;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.calculadora {
+    background-color: rgba(255, 255, 255, 0.4); /* Fondo con transparencia */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra fuerte */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: black; /* Color de las etiquetas */
+}
+
+input {
+    width: 200px; /* Cambiar el ancho a 200px */
+    padding: 10px;
+    margin: 0 auto 20px auto; /* Centrando el input */
+    display: block; /* Hacer que el input sea un bloque */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#resultado {
+    margin-top: 20px;
+    color: black; /* Color del resultado */
+}
+
+ul {
+    list-style-type: none; /* Sin viñetas */
+    padding: 0; /* Sin padding */
+}
+
+h3 {
+    margin-top: 20px; /* Espacio encima del título */
+    color: black; /* Color del título */
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .titulo-principal {
+        font-size: 28px; /* Tamaño del título más pequeño en pantallas más pequeñas */
+    }
+
+    input {
+        width: 80%; /* Ancho adaptado para pantallas más pequeñas */
+    }
+}

@@ -1,0 +1,62 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url("./images/fondo.jpg"); /* Cambia la ruta según tu imagen */
+    background-size: cover; /* Hace que la imagen cubra toda la pantalla sin deformarse */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    margin: 0;
+    padding: 20px;
+}
+
+.titulo-principal {
+    text-align: center;
+    color: #000; /* Color negro para el título */
+    margin-bottom: 20px;
+}
+
+.form-section {
+    max-width: 600px;
+    margin: 0 auto; /* Centra el formulario en la página */
+    background: rgba(255, 255, 255, 0.3); /* Fondo blanco con 30% de opacidad */
+    padding: 20px;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra más fuerte */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columna */
+}
+
+label {
+    margin-bottom: 5px; /* Espacio debajo de las etiquetas */
+    color: #555; /* Color del texto de las etiquetas */
+}
+
+input, textarea {
+    padding: 10px; /* Espacio interno de los campos */
+    margin-bottom: 15px; /* Espacio entre campos */
+    border: 1px solid #ccc; /* Bordes de los campos */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+button {
+    background-color: #28a745; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    padding: 10px 15px; /* Espacio interno del botón */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    font-size: 16px; /* Tamaño del texto */
+}
+
+button:hover {
+    background-color: #218838; /* Color más oscuro al pasar el mouse */
+}
+
+footer {
+    text-align: center; /* Centra el texto del footer */
+    margin-top: 20px; /* Espacio arriba del footer */
+    color: #000; /* Color negro para el texto del footer */
+    padding-top: 50px;
+}
